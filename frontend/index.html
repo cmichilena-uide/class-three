@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi tienda de tecnología</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h3>TecnoTienda</h3>
+        <ul class="nav_list">
+          <li class="nav_item"><a href="#products">Productos</a></li>
+          <li class="nav_item"><a href="#add">Agregar</a></li>
+          <li class="nav_item"><a href="#search">Buscar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <aside>
+        <h2 id="add">Agregar producto</h2>
+        <form id="product_form">
+          <label>Nombre</label>
+          <input type="text" id="name" required />
+          <label>Descripción</label>
+          <textarea id="description" required></textarea>
+          <label>Precio</label>
+          <input type="number" id="price" step="0.01" required />
+          <label>Stock</label>
+          <input type="number" id="stock" required />
+          <label>Categoría</label>
+          <select id="category">
+            <option value="">Seleccione una categoría</option>
+          </select>
+          <label>URL de la imagen (opcional)</label>
+          <input type="url" id="image" placeholder="https://..." />
+          <button type="submit" id="save_button">Guardar</button>
+          <button type="button" id="cancel_button" hidden>Cancelar</button>
+        </form>
+        <p id="form_message"></p>
+
+        <h2 id="search">Buscar producto</h2>
+        <form id="search_form">
+          <label>ID</label>
+          <input type="number" id="search_id" required />
+          <button type="submit">Buscar</button>
+        </form>
+        <p id="search_message"></p>
+        <div id="search_result"></div>
+      </aside>
+      <main>
+        <h1>Bienvenido a mi tienda</h1>
+        <div id="filters"></div>
+        <div id="products"></div>
+      </main>
+    </div>
+    <footer>
+      <p>Tarea 2 - Programación Web</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
